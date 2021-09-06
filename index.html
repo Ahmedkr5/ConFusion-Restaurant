@@ -30,7 +30,7 @@
             <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
          </ul>  
          <span class="navbar-text">
-            <a data-toggle="modal" data-target="#loginModal">
+            <a id="log">
             <span class="fa fa-sign-in"></span> Login</a>
         </span>
           </div>
@@ -116,12 +116,13 @@
                                 
                                     <label for="smoke" class="col-12  col-sm-2 col-form-label">Section</label>
                                 
-                                    <div class="btn-group" role="group" >
-                                        <input type="radio" class="btn-check" name="options" id="btnradio1" autocomplete="off" checked>
-                                        <label class="btn btn-success" for="btnradio1">Non Smoking</label>
-                                      
-                                        <input type="radio" class="btn-check" name="options" id="btnradio2" autocomplete="off">
-                                        <label class="btn btn-danger" for="btnradio2">Smoking</label>
+                                    <div class="btn-group btn-group-toggle"  data-toggle="buttons">
+                                        <label class="btn btn-success" for="option1">
+                                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                                        Non Smoking</label>
+                                        <label class="btn btn-danger" for="option2">
+                                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                                       Smoking</label>
                                       
                                 
                                       </div></div>
@@ -163,7 +164,7 @@
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
                     
-                    <a href="#reserv" class="btn btn-warning btn-block "  style="text-decoration: none;" data-toggle="modal" data-target="#reserv">Reserve Table</a>
+                    <a class="btn btn-warning btn-block "  style="text-decoration: none;" id="res">Reserve Table</a>
                 
             </div>
         </div>
@@ -350,8 +351,14 @@
                 $('#carouselbutton').addClass('btn-danger');
                 $('#carouselbutton').children('span').addClass('fa-pause');
                 }
+                });
+            $("#log").click(function(){
+                $('#loginModal').modal({show :true});
             });
-         
+            $("#res").click(function(){
+                $("#reserv").modal();
+            });
+
        });
 
    </script>
