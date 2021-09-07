@@ -363,35 +363,7 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('#mycarousel').carousel({ interval: 3000 });
-            $('#carouselbutton').click(function () {
-                if ($('#carouselbutton').children('span').hasClass('fa-pause')) {
-                    $('#mycarousel').carousel('pause');
-                    $('#carouselbutton').children('span').removeClass('fa-pause');
-                    $('#carouselbutton').removeClass('btn-danger');
-                    $('#carouselbutton').addClass('btn-success');
-                    $('#carouselbutton').children('span').addClass('fa-play');
-                }
-                else {
-                    $('#mycarousel').carousel('cycle');
-                    $('#carouselbutton').children('span').removeClass('fa-play');
-                    $('#carouselbutton').removeClass('btn-success');
-                    $('#carouselbutton').addClass('btn-danger');
-                    $('#carouselbutton').children('span').addClass('fa-pause');
-                }
-            });
-            $("#log").click(function () {
-                $('#loginModal').modal({ show: true });
-            });
-            $("#res").click(function () {
-                $("#reserv").modal();
-            });
-
-        });
-
-    </script>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>
