@@ -1,7 +1,7 @@
 # conFusion-Restaurant
 
 A responsive mobile-first Web Application of a restaurant created using bootstrap 4 (css components / js components /gridsystem ...) aswell as  JQuery / Sass & Less / Grunt / npm scripts
-
+mobile-first approach
 ### Short Videos
 
 #### Home Page:
